@@ -33,9 +33,7 @@ function openChapter(chapterNumber) {
 
     if (chapterNumber === 1) {
 
-        alert(
-            "Chapter 1 is coming next! We will build the complete lesson page."
-        );
+        window.location.href = "chapter1.html";
 
         return;
     }
@@ -44,7 +42,7 @@ function openChapter(chapterNumber) {
     if (chapterNumber === 2) {
 
         alert(
-            "Chapter 2 will become available after we build the learning system."
+            "Chapter 2 will become available after we build it."
         );
 
         return;
@@ -54,7 +52,7 @@ function openChapter(chapterNumber) {
     if (chapterNumber === 3) {
 
         alert(
-            "Chapter 3 will become available after we build the learning system."
+            "Chapter 3 will become available after we build it."
         );
 
         return;
@@ -64,7 +62,7 @@ function openChapter(chapterNumber) {
     if (chapterNumber === 4) {
 
         alert(
-            "Chapter 4 will become available after we build the learning system."
+            "Chapter 4 will become available after we build it."
         );
 
         return;

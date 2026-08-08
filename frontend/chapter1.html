@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter 1 | Python Basics | PyLearn</title>
+
+    <link rel="stylesheet" href="css/chapter.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         TOP NAVIGATION
+    ========================================= -->
+
+    <header class="chapter-navbar">
+
+        <div class="logo">
+            PyLearn
+        </div>
+
+
+        <div class="chapter-title">
+            Python Basics
+        </div>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="timer-button"
+                onclick="toggleTimer()"
+            >
+                <span>⏱</span>
+                <span id="timerDisplay">00:00:00</span>
+            </button>
+
+
+            <button
+                class="back-button"
+                onclick="goToCourse()"
+            >
+                Course Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         MAIN LEARNING LAYOUT
+    ========================================= -->
+
+    <main class="learning-layout">
+
+
+        <!-- ====================================
+             SIDEBAR
+        ===================================== -->
+
+        <aside class="lesson-sidebar">
+
+
+            <div class="sidebar-heading">
+
+                <p>
+                    CHAPTER 1
+                </p>
+
+                <h2>
+                    Python Basics
+                </h2>
+
+            </div>
+
+
+            <!-- Chapter Progress -->
+
+            <div class="chapter-progress">
+
+                <div class="progress-info">
+
+                    <span>
+                        Chapter Progress
+                    </span>
+
+                    <strong id="chapterProgressText">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="chapterProgressFill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LESSONS -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    LESSONS
+                </div>
+
+
+                <div class="lesson-list">
+
+
+                    <button
+                        class="lesson-item active"
+                        onclick="showLesson(1)"
+                        id="lessonButton1"
+                    >
+
+                        <span class="lesson-status" id="status1">
+                            ○
+                        </span>
+
+                        <span class="lesson-number">
+                            01
+                        </span>
+
+                        <span class="lesson-name">
+                            What is Python?
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="lesson-item"
+                        onclick="showLesson(2)"
+                        id="lessonButton2"
+                    >
+
+                        <span class="lesson-status" id="status2">
+                            ○
+                        </span>
+
+                        <span class="lesson-number">
+                            02
+                        </span>
+
+                        <span class="lesson-name">
+                            Why Learn Python?
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="lesson-item"
+                        onclick="showLesson(3)"
+                        id="lessonButton3"
+                    >
+
+                        <span class="lesson-status" id="status3">
+                            ○
+                        </span>
+
+                        <span class="lesson-number">
+                            03
+                        </span>
+
+                        <span class="lesson-name">
+                            Your First Program
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="lesson-item"
+                        onclick="showLesson(4)"
+                        id="lessonButton4"
+                    >
+
+                        <span class="lesson-status" id="status4">
+                            ○
+                        </span>
+
+                        <span class="lesson-number">
+                            04
+                        </span>
+
+                        <span class="lesson-name">
+                            Python Syntax
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="lesson-item"
+                        onclick="showLesson(5)"
+                        id="lessonButton5"
+                    >
+
+                        <span class="lesson-status" id="status5">
+                            ○
+                        </span>
+
+                        <span class="lesson-number">
+                            05
+                        </span>
+
+                        <span class="lesson-name">
+                            Comments
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="lesson-item"
+                        onclick="showLesson(6)"
+                        id="lessonButton6"
+                    >
+
+                        <span class="lesson-status" id="status6">
+                            ○
+                        </span>
+
+                        <span class="lesson-number">
+                            06
+                        </span>
+
+                        <span class="lesson-name">
+                            Input & Output
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ASSESSMENT -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    ASSESSMENT
+                </div>
+
+
+                <button
+                    class="special-item"
+                    onclick="showLesson(7)"
+                    id="lessonButton7"
+                >
+
+                    <span>
+                        ◆
+                    </span>
+
+                    <span>
+                        Chapter Quiz
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PRACTICE -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    PRACTICE
+                </div>
+
+
+                <button
+                    class="special-item"
+                    onclick="showLesson(8)"
+                    id="lessonButton8"
+                >
+
+                    <span>
+                        ◆
+                    </span>
+
+                    <span>
+                        Coding Problems
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- SIDEBAR NOTES -->
+
+            <div class="sidebar-note">
+
+                <span>
+                    💡
+                </span>
+
+                <p>
+                    Don't rush. Try solving the examples
+                    yourself before looking for help.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ====================================
+             CONTENT
+        ===================================== -->
+
+        <section class="lesson-content">
+
+
+            <!-- ==================================
+                 LESSON 1
+            =================================== -->
+
+            <article
+                class="lesson-page active"
+                id="lesson1"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            LESSON 01
+                        </div>
+
+                        <h1>
+                            What is Python?
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        class="bookmark-button"
+                        onclick="toggleBookmark(1)"
+                        id="bookmark1"
+                    >
+                        ☆ Bookmark
+                    </button>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    Python is a programming language that lets
+                    us give instructions to a computer in a
+                    relatively simple and readable way.
+                </p>
+
+
+                <div class="learn-card">
+
+                    <div class="card-label">
+                        THE IDEA
+                    </div>
+
+                    <h2>
+                        Think of Python as a way to talk to a computer.
+                    </h2>
+
+                    <p>
+                        We write instructions. Python interprets
+                        them. The computer performs the task.
+                    </p>
+
+                </div>
+
+
+                <h2 class="content-heading">
+                    Where can Python be used?
+                </h2>
+
+
+                <div class="topic-grid">
+
+                    <div class="topic-card">
+
+                        <span class="topic-number">
+                            01
+                        </span>
+
+                        <h3>
+                            AI & Machine Learning
+                        </h3>
+
+                        <p>
+                            Build models and AI applications.
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <span class="topic-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Data Science
+                        </h3>
+
+                        <p>
+                            Analyze and visualize data.
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <span class="topic-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Build applications and APIs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <span class="topic-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Automation
+                        </h3>
+
+                        <p>
+                            Automate repetitive tasks.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-check">
+
+                    <div class="card-label">
+                        QUICK CHECK
+                    </div>
+
+                    <h3>
+                        Which of these can Python be used for?
+                    </h3>
+
+                    <div class="answer-options">
+
+                        <button onclick="checkAnswer(this, true)">
+                            AI and Machine Learning
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            Only making websites
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            Only mathematics
+                        </button>
+
+                    </div>
+
+                    <p
+                        class="check-result"
+                        id="checkResult1"
+                    ></p>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <span></span>
+
+                    <button
+                        class="next-button"
+                        onclick="completeAndNext(1)"
+                    >
+                        Mark Complete & Continue →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LESSON 2
+            =================================== -->
+
+            <article
+                class="lesson-page"
+                id="lesson2"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            LESSON 02
+                        </div>
+
+                        <h1>
+                            Why Learn Python?
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        class="bookmark-button"
+                        onclick="toggleBookmark(2)"
+                        id="bookmark2"
+                    >
+                        ☆ Bookmark
+                    </button>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    Python is popular because it is relatively
+                    easy to read while still being powerful enough
+                    for real-world development.
+                </p>
+
+
+                <div class="learn-card">
+
+                    <div class="card-label">
+                        REMEMBER
+                    </div>
+
+                    <h2>
+                        Don't learn Python just by reading Python.
+                    </h2>
+
+                    <p>
+                        You will learn faster by writing small
+                        programs, making mistakes and fixing them.
+                    </p>
+
+                </div>
+
+
+                <h2 class="content-heading">
+                    Your learning path
+                </h2>
+
+
+                <div class="path-grid">
+
+                    <div class="path-item">
+                        <strong>Learn</strong>
+                        <span>Understand the concept.</span>
+                    </div>
+
+                    <div class="path-item">
+                        <strong>Try</strong>
+                        <span>Write a small program.</span>
+                    </div>
+
+                    <div class="path-item">
+                        <strong>Practice</strong>
+                        <span>Solve problems yourself.</span>
+                    </div>
+
+                    <div class="path-item">
+                        <strong>Build</strong>
+                        <span>Use your skills in projects.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-check">
+
+                    <div class="card-label">
+                        THINK
+                    </div>
+
+                    <h3>
+                        What should you do after learning a concept?
+                    </h3>
+
+                    <div class="answer-options">
+
+                        <button onclick="checkAnswer(this, false)">
+                            Immediately ask AI for the answer
+                        </button>
+
+                        <button onclick="checkAnswer(this, true)">
+                            Try writing code yourself
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            Skip it and move to the next chapter
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous-button"
+                        onclick="showLesson(1)"
+                    >
+                        ← Previous
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="completeAndNext(2)"
+                    >
+                        Mark Complete & Continue →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LESSON 3
+            =================================== -->
+
+            <article
+                class="lesson-page"
+                id="lesson3"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            LESSON 03
+                        </div>
+
+                        <h1>
+                            Your First Python Program
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        class="bookmark-button"
+                        onclick="toggleBookmark(3)"
+                        id="bookmark3"
+                    >
+                        ☆ Bookmark
+                    </button>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    Let's write your first Python statement.
+                </p>
+
+
+                <div class="try-card">
+
+                    <div class="try-header">
+
+                        <div>
+
+                            <div class="card-label">
+                                EXAMPLE
+                            </div>
+
+                            <h3>
+                                Print something on the screen
+                            </h3>
+
+                        </div>
+
+                        <span class="python-tag">
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="code-editor">
+
+                        <div class="editor-top">
+                            <span></span>
+
+                            <span>
+                                example.py
+                            </span>
+
+                            <span>
+                                Python
+                            </span>
+                        </div>
+
+
+                        <pre><code>print("Hello, World!")</code></pre>
+
+                    </div>
+
+
+                    <div class="output-area">
+
+                        <div class="output-title">
+                            OUTPUT
+                        </div>
+
+                        <div class="output-content">
+                            Hello, World!
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="run-button"
+                        onclick="showRunnerMessage()"
+                    >
+                        ▶ Run
+                    </button>
+
+                </div>
+
+
+                <div class="challenge-card">
+
+                    <div class="card-label">
+                        TRY IT
+                    </div>
+
+                    <h3>
+                        Change the message.
+                    </h3>
+
+                    <p>
+                        What happens if you replace
+                        <strong>Hello, World!</strong> with
+                        your own message?
+                    </p>
+
+
+                    <div class="challenge-code">
+                        print("I am learning Python!")
+                    </div>
+
+
+                    <button
+                        class="run-button"
+                        onclick="showRunnerMessage()"
+                    >
+                        ▶ Run & Check
+                    </button>
+
+                    <p class="runner-note">
+                        The live Python runner will be connected
+                        here in the next development step.
+                    </p>
+
+                </div>
+
+
+                <div class="quick-check">
+
+                    <div class="card-label">
+                        QUICK CHECK
+                    </div>
+
+                    <h3>
+                        What does <code>print()</code> do?
+                    </h3>
+
+                    <div class="answer-options">
+
+                        <button onclick="checkAnswer(this, true)">
+                            Displays output
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            Takes user input
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            Creates a loop
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous-button"
+                        onclick="showLesson(2)"
+                    >
+                        ← Previous
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="completeAndNext(3)"
+                    >
+                        Mark Complete & Continue →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LESSON 4
+            =================================== -->
+
+            <article
+                class="lesson-page"
+                id="lesson4"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            LESSON 04
+                        </div>
+
+                        <h1>
+                            Python Syntax
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        class="bookmark-button"
+                        onclick="toggleBookmark(4)"
+                        id="bookmark4"
+                    >
+                        ☆ Bookmark
+                    </button>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    Syntax means the rules for writing code
+                    correctly.
+                </p>
+
+
+                <div class="learn-card">
+
+                    <div class="card-label">
+                        THE IMPORTANT PART
+                    </div>
+
+                    <h2>
+                        Python uses indentation to define blocks.
+                    </h2>
+
+                    <p>
+                        This becomes especially important when
+                        we start writing conditions, loops and
+                        functions.
+                    </p>
+
+                </div>
+
+
+                <div class="try-card">
+
+                    <div class="try-header">
+
+                        <div>
+
+                            <div class="card-label">
+                                EXAMPLE
+                            </div>
+
+                            <h3>
+                                Indentation matters
+                            </h3>
+
+                        </div>
+
+                        <span class="python-tag">
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="code-editor">
+
+                        <div class="editor-top">
+
+                            <span></span>
+
+                            <span>
+                                syntax.py
+                            </span>
+
+                            <span>
+                                Python
+                            </span>
+
+                        </div>
+
+
+                        <pre><code>if 10 > 5:
+    print("10 is greater than 5")</code></pre>
+
+                    </div>
+
+
+                    <div class="output-area">
+
+                        <div class="output-title">
+                            OUTPUT
+                        </div>
+
+                        <div class="output-content">
+                            10 is greater than 5
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="run-button"
+                        onclick="showRunnerMessage()"
+                    >
+                        ▶ Run
+                    </button>
+
+                </div>
+
+
+                <div class="quick-check">
+
+                    <div class="card-label">
+                        QUICK CHECK
+                    </div>
+
+                    <h3>
+                        Why is indentation important in Python?
+                    </h3>
+
+                    <div class="answer-options">
+
+                        <button onclick="checkAnswer(this, true)">
+                            It defines blocks of code
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            It changes the computer's screen size
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            It is only for decoration
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous-button"
+                        onclick="showLesson(3)"
+                    >
+                        ← Previous
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="completeAndNext(4)"
+                    >
+                        Mark Complete & Continue →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LESSON 5
+            =================================== -->
+
+            <article
+                class="lesson-page"
+                id="lesson5"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            LESSON 05
+                        </div>
+
+                        <h1>
+                            Comments
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        class="bookmark-button"
+                        onclick="toggleBookmark(5)"
+                        id="bookmark5"
+                    >
+                        ☆ Bookmark
+                    </button>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    Comments let you leave notes in your code
+                    that Python does not execute.
+                </p>
+
+
+                <div class="try-card">
+
+                    <div class="try-header">
+
+                        <div>
+
+                            <div class="card-label">
+                                EXAMPLE
+                            </div>
+
+                            <h3>
+                                A simple comment
+                            </h3>
+
+                        </div>
+
+                        <span class="python-tag">
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="code-editor">
+
+                        <div class="editor-top">
+
+                            <span></span>
+
+                            <span>
+                                comments.py
+                            </span>
+
+                            <span>
+                                Python
+                            </span>
+
+                        </div>
+
+
+                        <pre><code># This is a comment
+
+print("Hello")</code></pre>
+
+                    </div>
+
+
+                    <div class="output-area">
+
+                        <div class="output-title">
+                            OUTPUT
+                        </div>
+
+                        <div class="output-content">
+                            Hello
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="run-button"
+                        onclick="showRunnerMessage()"
+                    >
+                        ▶ Run
+                    </button>
+
+                </div>
+
+
+                <div class="quick-check">
+
+                    <div class="card-label">
+                        QUICK CHECK
+                    </div>
+
+                    <h3>
+                        Which symbol starts a Python comment?
+                    </h3>
+
+                    <div class="answer-options">
+
+                        <button onclick="checkAnswer(this, false)">
+                            /
+                        </button>
+
+                        <button onclick="checkAnswer(this, true)">
+                            #
+                        </button>
+
+                        <button onclick="checkAnswer(this, false)">
+                            $
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous-button"
+                        onclick="showLesson(4)"
+                    >
+                        ← Previous
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="completeAndNext(5)"
+                    >
+                        Mark Complete & Continue →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LESSON 6
+            =================================== -->
+
+            <article
+                class="lesson-page"
+                id="lesson6"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            LESSON 06
+                        </div>
+
+                        <h1>
+                            Input & Output
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        class="bookmark-button"
+                        onclick="toggleBookmark(6)"
+                        id="bookmark6"
+                    >
+                        ☆ Bookmark
+                    </button>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    A program becomes interactive when it can
+                    receive information from the user.
+                </p>
+
+
+                <div class="try-card">
+
+                    <div class="try-header">
+
+                        <div>
+
+                            <div class="card-label">
+                                EXAMPLE
+                            </div>
+
+                            <h3>
+                                Get input from the user
+                            </h3>
+
+                        </div>
+
+                        <span class="python-tag">
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="code-editor">
+
+                        <div class="editor-top">
+
+                            <span></span>
+
+                            <span>
+                                input.py
+                            </span>
+
+                            <span>
+                                Python
+                            </span>
+
+                        </div>
+
+
+                        <pre><code>name = input("Enter your name: ")
+
+print("Hello", name)</code></pre>
+
+                    </div>
+
+
+                    <div class="output-area">
+
+                        <div class="output-title">
+                            EXAMPLE OUTPUT
+                        </div>
+
+                        <div class="output-content">
+                            Enter your name: Alex
+                            <br>
+                            Hello Alex
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="run-button"
+                        onclick="showRunnerMessage()"
+                    >
+                        ▶ Run
+                    </button>
+
+                </div>
+
+
+                <div class="challenge-card">
+
+                    <div class="card-label">
+                        YOUR TURN
+                    </div>
+
+                    <h3>
+                        Create a simple greeting program.
+                    </h3>
+
+                    <p>
+                        Ask the user for their name and print
+                        a greeting using that name.
+                    </p>
+
+
+                    <div class="challenge-code">
+                        # Write your code here
+                    </div>
+
+
+                    <button
+                        class="run-button"
+                        onclick="showRunnerMessage()"
+                    >
+                        ▶ Run & Check
+                    </button>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        Next step:
+                    </strong>
+
+                    <p>
+                        In the next chapter, we'll learn how
+                        variables and data types work.
+                    </p>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous-button"
+                        onclick="showLesson(5)"
+                    >
+                        ← Previous
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="completeAndNext(6)"
+                    >
+                        Finish Lessons →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 QUIZ
+            =================================== -->
+
+           <!-- ==================================
+     CHAPTER QUIZ
+=================================== -->
+
+<article
+    class="lesson-page"
+    id="lesson7"
+>
+
+    <div class="lesson-top">
+
+        <div>
+
+            <div class="lesson-label">
+                ASSESSMENT
+            </div>
+
+            <h1>
+                Chapter Quiz
+            </h1>
+
+        </div>
+
+    </div>
+
+
+    <p class="lesson-intro">
+        Test what you remember before moving on to
+        coding practice.
+    </p>
+
+
+    <!-- QUIZ PROGRESS -->
+
+    <div class="quiz-progress-container">
+
+        <div class="quiz-progress-info">
+
+            <span id="quizQuestionNumber">
+                Question 1 of 5
+            </span>
+
+            <span id="quizScore">
+                Score: 0
+            </span>
+
+        </div>
+
+
+        <div class="quiz-progress-bar">
+
+            <div
+                id="quizProgressFill"
+                class="quiz-progress-fill"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUIZ CARD -->
+
+    <div
+        class="quiz-card"
+        id="quizCard"
+    >
+
+        <div class="quiz-question">
+
+            <span class="question-label">
+                QUESTION
+            </span>
+
+
+            <h2 id="quizQuestion">
+                Which function is used to display
+                output in Python?
+            </h2>
+
+
+            <div
+                class="quiz-options"
+                id="quizOptions"
+            >
+
+                <!-- Options will be inserted by JavaScript -->
+
+            </div>
+
+
+            <div
+                class="quiz-feedback"
+                id="quizFeedback"
+            ></div>
+
+
+            <button
+                class="next-question-button"
+                id="nextQuestionButton"
+                onclick="nextQuestion()"
+            >
+                Next Question →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUIZ RESULT -->
+
+    <div
+        class="quiz-result-card"
+        id="quizResultCard"
+    >
+
+        <div class="result-icon">
+            ★
+        </div>
+
+
+        <div class="card-label">
+            QUIZ COMPLETE
+        </div>
+
+
+        <h2 id="finalScore">
+            0 / 5
+        </h2>
+
+
+        <p id="finalMessage">
+            Your result will appear here.
+        </p>
+
+
+        <div class="result-actions">
+
+            <button
+                class="retry-button"
+                onclick="startQuiz()"
+            >
+                Retry Quiz
+            </button>
+
+
+            <button
+                class="continue-button"
+                onclick="showLesson(8)"
+            >
+                Continue to Practice →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PASSING INFO -->
+
+    <div class="info-box">
+
+        <strong>
+            Passing score: 4 / 5
+        </strong>
+
+        <p>
+            Take your time. Try answering from memory
+            before checking the options.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-navigation">
+
+        <button
+            class="previous-button"
+            onclick="showLesson(6)"
+        >
+            ← Lessons
+        </button>
+
+
+        <button
+            class="next-button"
+            onclick="showLesson(8)"
+        >
+            Coding Practice →
+        </button>
+
+    </div>
+
+</article>
+
+
+
+            <!-- ==================================
+                 CODING PRACTICE
+            =================================== -->
+
+            <article
+                class="lesson-page"
+                id="lesson8"
+            >
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <div class="lesson-label">
+                            PRACTICE
+                        </div>
+
+                        <h1>
+                            Coding Problems
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <p class="lesson-intro">
+                    You've learned the basics. Now try solving
+                    problems yourself.
+                </p>
+
+
+                <div class="practice-intro">
+
+                    <h2>
+                        External Practice
+                    </h2>
+
+                    <p>
+                        We'll curate 5–6 problems specifically
+                        related to the concepts in this chapter.
+                    </p>
+
+                </div>
+
+
+                <div class="problem-list">
+
+                    <a
+                        href="#"
+                        class="problem-card"
+                    >
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Beginner Python Problem
+                            </strong>
+
+                            <small>
+                                Easy
+                            </small>
+
+                        </div>
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="problem-card"
+                    >
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Basic Input / Output
+                            </strong>
+
+                            <small>
+                                Easy
+                            </small>
+
+                        </div>
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="problem-card"
+                    >
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Simple Programming Problem
+                            </strong>
+
+                            <small>
+                                Easy
+                            </small>
+
+                        </div>
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="problem-card"
+                    >
+
+                        <span>
+                            04
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Python Basics Challenge
+                            </strong>
+
+                            <small>
+                                Easy
+                            </small>
+
+                        </div>
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="problem-card"
+                    >
+
+                        <span>
+                            05
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Beginner Logic Problem
+                            </strong>
+
+                            <small>
+                                Easy
+                            </small>
+
+                        </div>
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="problem-card"
+                    >
+
+                        <span>
+                            06
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Python Practice Challenge
+                            </strong>
+
+                            <small>
+                                Easy
+                            </small>
+
+                        </div>
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+                </div>
+
+
+                <div class="practice-note">
+
+                    <strong>
+                        No AI yet.
+                    </strong>
+
+                    <p>
+                        At the fundamentals level, try solving
+                        problems yourself first. AI assistance
+                        will unlock later in the course.
+                    </p>
+
+                </div>
+
+
+                <div class="chapter-complete-card">
+
+                    <div>
+
+                        <span class="card-label">
+                            MILESTONE
+                        </span>
+
+                        <h2>
+                            Complete the chapter
+                        </h2>
+
+                        <p>
+                            Finish the lessons, quiz and practice
+                            problems to complete Chapter 1.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="complete-button"
+                        onclick="completeChapter()"
+                    >
+                        Complete Chapter
+                    </button>
+
+                </div>
+
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous-button"
+                        onclick="showLesson(7)"
+                    >
+                        ← Quiz
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================================
+         NOTES PANEL
+    ========================================= -->
+
+    <div class="notes-panel">
+
+        <div class="notes-header">
+
+            <div>
+
+                <span class="card-label">
+                    MY NOTES
+                </span>
+
+                <h2>
+                    Chapter 1 Notes
+                </h2>
+
+            </div>
+
+
+            <button
+                onclick="toggleNotes()"
+                class="notes-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <textarea
+            id="chapterNotes"
+            placeholder="Write your own notes here..."
+        ></textarea>
+
+
+        <button
+            class="save-notes-button"
+            onclick="saveNotes()"
+        >
+            Save Notes
+        </button>
+
+
+        <p id="notesSaved">
+        </p>
+
+    </div>
+
+
+    <!-- Notes floating button -->
+
+    <button
+        class="floating-notes-button"
+        onclick="toggleNotes()"
+    >
+        📝 Notes
+    </button>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="js/chapter.js"></script>
+
+</body>
+
+</html>
