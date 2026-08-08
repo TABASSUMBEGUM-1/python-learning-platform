@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python Course | PyLearn</title>
+
+    <link rel="stylesheet" href="css/course.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="course-navbar">
+
+        <div class="logo">
+            PyLearn
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="course.html" class="active">
+                Course
+            </a>
+
+        </nav>
+
+
+        <button
+            class="back-button"
+            onclick="goHome()"
+        >
+            Back to Home
+        </button>
+
+    </header>
+
+
+
+    <!-- ========================================
+         COURSE HEADER
+    ========================================= -->
+
+    <main>
+
+
+        <section class="course-header">
+
+            <div class="course-header-content">
+
+
+                <div class="course-label">
+                    PYTHON COURSE
+                </div>
+
+
+                <h1>
+                    Learn Python
+                    <span>from Zero to Confident.</span>
+                </h1>
+
+
+                <p>
+                    A structured learning path designed to take
+                    you from Python basics to solving problems
+                    and building real projects.
+                </p>
+
+
+                <div class="course-stats">
+
+                    <div class="stat">
+
+                        <strong>
+                            20+
+                        </strong>
+
+                        <span>
+                            Chapters
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <strong>
+                            100+
+                        </strong>
+
+                        <span>
+                            Practice Problems
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <strong>
+                            10+
+                        </strong>
+
+                        <span>
+                            Mini Projects
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             PROGRESS SECTION
+        ========================================= -->
+
+        <section class="progress-section">
+
+
+            <div class="progress-card">
+
+
+                <div class="progress-top">
+
+                    <div>
+
+                        <p class="small-label">
+                            YOUR PROGRESS
+                        </p>
+
+                        <h2>
+                            Keep Going!
+                        </h2>
+
+                    </div>
+
+
+                    <div class="progress-percentage">
+                        0%
+                    </div>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+
+                <p class="progress-text">
+                    0 of 20 chapters completed
+                </p>
+
+
+                <button
+                    class="continue-button"
+                    onclick="continueLearning()"
+                >
+                    Start Learning
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CHAPTER SECTION
+        ========================================= -->
+
+        <section class="chapters-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="small-label">
+                        LEARNING PATH
+                    </p>
+
+                    <h2>
+                        Python Chapters
+                    </h2>
+
+                </div>
+
+
+                <p>
+                    Follow the chapters in order and
+                    build your skills step by step.
+                </p>
+
+            </div>
+
+
+
+            <!-- ====================================
+                 CHAPTER LIST
+            ===================================== -->
+
+            <div class="chapter-list">
+
+
+
+                <!-- CHAPTER 1 -->
+
+                <div
+                    class="chapter-card available"
+                    onclick="openChapter(1)"
+                >
+
+                    <div class="chapter-number">
+                        01
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <span class="chapter-status">
+                            START HERE
+                        </span>
+
+                        <h3>
+                            Python Basics
+                        </h3>
+
+                        <p>
+                            Introduction to Python,
+                            syntax, comments and your
+                            first Python program.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                6 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 2 -->
+
+                <div
+                    class="chapter-card available"
+                    onclick="openChapter(2)"
+                >
+
+                    <div class="chapter-number">
+                        02
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <span class="chapter-status">
+                            NEXT
+                        </span>
+
+                        <h3>
+                            Variables & Data Types
+                        </h3>
+
+                        <p>
+                            Learn variables, numbers,
+                            strings, booleans and type
+                            conversion.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                7 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 3 -->
+
+                <div
+                    class="chapter-card available"
+                    onclick="openChapter(3)"
+                >
+
+                    <div class="chapter-number">
+                        03
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <h3>
+                            Operators
+                        </h3>
+
+                        <p>
+                            Arithmetic, comparison,
+                            logical, assignment and
+                            membership operators.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                6 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 4 -->
+
+                <div
+                    class="chapter-card available"
+                    onclick="openChapter(4)"
+                >
+
+                    <div class="chapter-number">
+                        04
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <h3>
+                            Conditional Statements
+                        </h3>
+
+                        <p>
+                            Understand if, elif and else
+                            and learn how programs make
+                            decisions.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                7 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 5 -->
+
+                <div
+                    class="chapter-card locked"
+                >
+
+                    <div class="chapter-number">
+                        05
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <span class="chapter-status locked-status">
+                            LOCKED
+                        </span>
+
+                        <h3>
+                            Loops
+                        </h3>
+
+                        <p>
+                            Learn for loops, while loops,
+                            nested loops, break and continue.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                8 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        🔒
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 6 -->
+
+                <div
+                    class="chapter-card locked"
+                >
+
+                    <div class="chapter-number">
+                        06
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <span class="chapter-status locked-status">
+                            LOCKED
+                        </span>
+
+                        <h3>
+                            Strings
+                        </h3>
+
+                        <p>
+                            Work with strings, indexing,
+                            slicing and useful string methods.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                8 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        🔒
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 7 -->
+
+                <div
+                    class="chapter-card locked"
+                >
+
+                    <div class="chapter-number">
+                        07
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <span class="chapter-status locked-status">
+                            LOCKED
+                        </span>
+
+                        <h3>
+                            Lists
+                        </h3>
+
+                        <p>
+                            Learn one of Python's most
+                            important data structures.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                9 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        🔒
+                    </div>
+
+                </div>
+
+
+
+                <!-- CHAPTER 8 -->
+
+                <div
+                    class="chapter-card locked"
+                >
+
+                    <div class="chapter-number">
+                        08
+                    </div>
+
+
+                    <div class="chapter-info">
+
+                        <span class="chapter-status locked-status">
+                            LOCKED
+                        </span>
+
+                        <h3>
+                            Tuples, Sets & Dictionaries
+                        </h3>
+
+                        <p>
+                            Explore Python's other powerful
+                            built-in collection types.
+                        </p>
+
+                        <div class="chapter-meta">
+
+                            <span>
+                                10 Lessons
+                            </span>
+
+                            <span>
+                                Beginner
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-arrow">
+                        🔒
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CALL TO ACTION
+        ========================================= -->
+
+        <section class="course-cta">
+
+            <div>
+
+                <p class="small-label">
+                    READY?
+                </p>
+
+                <h2>
+                    Your Python journey starts here.
+                </h2>
+
+                <p>
+                    Start with Chapter 1 and build
+                    your skills one step at a time.
+                </p>
+
+                <button
+                    class="continue-button"
+                    onclick="openChapter(1)"
+                >
+                    Start Chapter 1
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    PyLearn
+                </h3>
+
+                <p>
+                    Learn Python. Build skills. Create.
+                </p>
+
+            </div>
+
+
+            <p>
+                © 2026 PyLearn
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/course.js"></script>
+
+</body>
+
+</html>
